@@ -73,8 +73,8 @@ staticplot = ggplot2::ggplot(
   ggplot2::geom_text(ggplot2::aes(y = 0, label = paste(cnae_nm, " ")),size = 5.2, hjust = 1.1) +
   ggplot2::geom_text(ggplot2::aes(y=acum,label = lbl, hjust=0, size = 5)) +
   ggplot2::coord_flip(clip = "off", expand = FALSE) +
-  ggplot2::scale_fill_manual(values = vistrnv::trnv_colors_palette(n = dplyr::n_distinct(base$cnae_nm),palette = '2greens')) +
-  ggplot2::scale_color_manual(values = vistrnv::trnv_colors_palette(n = dplyr::n_distinct(base$cnae_nm),palette = '2greens')) +
+  # ggplot2::scale_fill_manual(values = vistrnv::trnv_colors_palette(n = dplyr::n_distinct(base$cnae_nm),palette = '2greens')) +
+  # ggplot2::scale_color_manual(values = vistrnv::trnv_colors_palette(n = dplyr::n_distinct(base$cnae_nm),palette = '2greens')) +
   ggplot2::scale_y_continuous(breaks = scales::pretty_breaks(5),labels = scales::comma) +
   ggplot2::scale_x_reverse() +
   ggplot2::guides(color = "none", fill = "none") +
