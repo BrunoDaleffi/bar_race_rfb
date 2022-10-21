@@ -31,6 +31,8 @@ tab_estabelecimentos <- function(files){
           cnpj_raiz,
           cnpj = paste0(cnpj_raiz,cnpj_comp,cnpj_dv),
           dt_inicio,
+          situacao,
+          dt_situacao,
           matriz,
           uf,
           cnae_principal
@@ -72,9 +74,6 @@ tab_empresas <- function(files){
 
 
 # Salva bases -------------------------------------------------------------
-
-# Os arquivos aqui são aqueles existentes nesse link: https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/cadastros/consultas/dados-publicos-cnpj
-# Todos os arquivos de Empresas e todos os arquivos de Estabelecimentos.
 
 files_estabelecimentos <- fs::dir_ls('data-raw/rfb/brutos/estabelecimento/')
 files_empresas <- fs::dir_ls('data-raw/rfb/brutos/empresa/')
