@@ -95,7 +95,7 @@ base_tempo %>%
   dplyr::rename(tempo = t_obs) %>% 
   dplyr::select(strata,p, tempo) %>%
   ggplot2::ggplot(ggplot2::aes(x = tempo, y = p)) + 
-  ggplot2::geom_line(size = 1,color = vistrnv::trnv_colors_palette(1)) + 
+  ggplot2::geom_line(size = 1,color = "#007A74") + 
   ggplot2::geom_point(x = mediana, y = 0.5,color = '#E17605') +
   ggplot2::geom_text(x = mediana+50, y = 0.5,label = 'Mediana: 165 dias',check_overlap = TRUE) +
   ggplot2::labs(x = "Tempo (dias)",y = "Probabilidade de sobrevivencia\n[P(T ≥ t)]",colour = "", linetype = "") + 
@@ -113,8 +113,8 @@ base_artigo %>%
   dplyr::arrange(ano) %>%
   dplyr::mutate(acum = purrr::accumulate(n,sum)) %>%
   ggplot2::ggplot(aes(x = ano, y = acum)) +
-  ggplot2::geom_col(fill = vistrnv::trnv_colors_palette(1)) +
-  ggplot2::geom_smooth(se = FALSE,color = vistrnv::trnv_colors_palette(2)[2]) +
+  ggplot2::geom_col(fill = "#007A74") +
+  ggplot2::geom_smooth(se = FALSE,color = "#00E6DA") +
   ggplot2::labs(x = 'Ano', y = 'Volume acumulado de empresas abertas\nno ramo de atividades políticas') +
   ggplot2::scale_x_continuous(breaks = scales::pretty_breaks(10)) +
   ggplot2::scale_y_continuous(limits = c(0,NA),
